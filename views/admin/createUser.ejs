@@ -1,0 +1,47 @@
+<form action="/admin/edit" method="post">
+    <div class="col-12 px-5 mb-1 bg-light py-5" style="border-radius: 2em;">
+        <h5 class="text-center">Create User</h5>
+        <hr class="mx-5">
+        <div class="">
+            <label for="text" class="form-label pt-2 mb-0">Full Name</label>
+            <input type="text" placeholder="Enter your full name" pattern="[A-Za-z ]*"
+                oninvalid="setCustomValidity('Please enter alphabetic characters only')" oninput="setCustomValidity('')"
+                name="name" class="form-control" id="name" required> </input>
+        </div>
+        <div class="">
+            <label for="email" class="form-label pt-2 mb-0">Email address</label>
+            <input type="email" name="email" class="form-control" id="email" placeholder="Enter email ID" required>
+            </input>
+        </div>
+
+        <div class="">
+            <label for="phone" class="form-label pt-2 mb-0">Phone number</label>
+            <input type="number" name="phone" class="form-control" id="phone" placeholder="Enter contact number"
+                required> </input>
+        </div>
+
+        <div class="">
+            <label for="password" class="form-label pt-2 mb-0">Password</label>
+            <input type="password" name="password" class="form-control" placeholder="Enter password" id="password"
+                required> </input>
+        </div>
+
+        <div class="">
+            <label for="password" class="form-label pt-2 mb-0">ConfirmPassword</label>
+            <input type="password" name="password2" placeholder="Re-enter password" class="form-control" id="password2"
+                required></input>
+        </div>
+
+        <div class="">
+            <label for="admin_status" class="form-label pt-2 mb-0">Admin status</label>
+            <select name="admin_status" class="form-control" id="admin_status" required>
+                <option value="false">false</option>
+                <option value="true">true</option>
+            </select>
+        </div>
+
+        <div class="text-center mb-2">
+            <button type="submit" class="btn btn-primary mt-3">Create User</button>
+        </div>
+    </div>
+</form>

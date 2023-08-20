@@ -1,0 +1,32 @@
+<%- include('../layouts/header') %>
+
+<header>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="d-flex">
+                <!-- <img class="pb-2" style="width: 3em;"
+                    src="https://icon-library.com/images/e-commerce-icon-png/e-commerce-icon-png-5.jpg"></img> -->
+                <!-- <h3 class="p-2 fw-bold text-danger">eezi<span class="text-success">Buy</span></h3> -->
+            </div>
+            <a class="navbar-brand ps-4 fw-bold">HOME PAGE</a>
+            <form class="d-flex" action="/logout" method="post">
+                <button type="submit" class="btn btn-danger w-100">Logout</button>
+            </form>
+        </div>
+    </nav>
+</header>
+<div class="container-fluid" style="background-color: rgb(208,236,248);">
+    <div class="row text-center">
+        <div class="col-md-6">
+            <!-- Your content here -->
+        </div>
+        <div class="col-md-6 p-4">
+            <h3 class="pt-4">Welcome <%=locals.username ? locals.username : 'User' %></h3>
+            <hr>
+           
+            <!-- Your content here -->
+        </div>
+    </div>
+</div>
+
+<%- include('../layouts/footer') %>

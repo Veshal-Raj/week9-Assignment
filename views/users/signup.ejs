@@ -1,0 +1,77 @@
+<%- include('../layouts/header') %>
+
+<style>
+    body {
+        background-color: #f5f5f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .container {
+        max-width: 400px;
+        padding: 40px;
+        background-color: rgba(240, 248, 255, 0.911);
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-control {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        background-color: #4b7bec;
+        border: none;
+        width: 100%;
+        padding: 10px;
+        border-radius: 4px;
+        color: #ffffff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .btn-primary:hover {
+        background-color: #386cea;
+    }
+
+    .alert {
+        background-color: #f7dc6f;
+        color: #333333;
+        border: none;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 14px;
+        text-align: center;
+    }
+</style>
+
+<div class="container">
+    <form action="/register" method="post">
+        <div class="text-center">
+            <!-- <h3 class="pb-3 fw-bold text-danger">eezi<span class="text-success">Buy</span></h3> -->
+        </div>
+        <h4 class="mb-4 text-center">Sign Up</h4>
+        <% if(locals.message){ %>
+            <div class="alert alert-warning">
+                <%= locals.message %>
+            </div>
+        <% } %>
+        <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+        <input type="email" name="email" class="form-control" placeholder="Email address" required>
+        <input type="text" name="phone" class="form-control" placeholder="Phone number" pattern="[0-9-]+" required>
+        <input type="password" name="password" class="form-control" placeholder="Password" required>
+        <input type="password" name="password2" class="form-control" placeholder="Confirm Password" required>
+        <button type="submit" class="btn btn-primary">Signup</button>
+        <p class="text-center mt-3">Already have an account? <a href="/">Login</a></p>
+    </form>
+</div>
+
+<%- include('../layouts/footer') %>
