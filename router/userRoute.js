@@ -27,11 +27,11 @@ user_route.get('/',auth.isLogout,userController.loginLoad)
 //signup
 user_route.get('/register',auth.isLogout,userController.loadRegister)
 user_route.post('/register',userController.insertUser)
-user_route.post('/register',(req,res)=>{
+// user_route.post('/register',(req,res)=>{
 // console.log(req.body)
-console.log('Hi')
+// console.log('Hi')
 
-})
+// })
 //login
 user_route.get('/login',auth.isLogout,userController.loginLoad)
 user_route.post('/login',userController.verifyLogin)

@@ -108,8 +108,8 @@ const deleteUser = async(req,res)=>{
         if(req.body.phone){
             await User.deleteOne({ phone: req.body.phone})
         }else{
-            User.deleteOne({email:req.body.email})
-            res.redirect("/admin?alert=User deleted successfully")
+            await User.deleteOne({email:req.body.email})
+            res.redirect("/admin/home?alert=User deleted successfully")
         }
     } catch (error) {
         console.log(error.message)
